@@ -1,0 +1,359 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    box-sizing: border-box;
+    text-decoration: none;
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the screen */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+.scrollable-section {
+    max-height: 500px; /* Set a max height to make the content scrollable */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    padding: 20px;
+}
+
+
+/* Initial fade-out state */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px); /* Starts slightly lower */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+/* While in view, animate the element */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Bring the element back to the normal position */
+}
+
+/* Optional: Add more animations while scrolling (e.g., rotate, scale, etc.) */
+.fade-in.scrolled {
+    transform: translateY(0) scale(1.05); /* Scale up while visible */
+    opacity: 0.9; /* Slight opacity change while scrolling */
+}
+
+
+
+
+/* Header Styles */
+header {
+    background-color: rgb(82, 82, 218);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Title */
+.hero h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+/* Social Links */
+.social-links a {
+    margin: 0 8px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.8em;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        gap: 5px;
+    }
+    
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+
+
+    }
+}
+
+
+
+/* About Section (Adjusted for readability and aesthetics) */
+.about {
+    text-align: center;
+    padding: 40px 15px;
+    background-color: #f4f4f4; /* Added background color for contrast */
+}
+
+.about .container {
+    max-width: 1000px; /* Increased width for better alignment on larger screens */
+    margin: auto;
+    padding: 20px;
+}
+
+.about h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    color: rgb(82, 82, 218); /* Subtle contrast for the heading */
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Additional padding and margin adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .about h1 {
+        font-size: 1.6rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* Mission and Vision Section */
+.mission-vision {
+    padding: 30px 15px;
+    background-color: #fff;
+}
+
+.mission-vision .container {
+    max-width: 95%;
+}
+
+/* Flex container for text and image */
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 20px; /* Adds space between text and image */
+}
+
+/* Mission and Vision Text */
+.miss_vision {
+    flex: 1; /* Allow the text section to take full width if needed */
+    margin-bottom: 20px;
+}
+
+.mission,
+.vision {
+    margin-bottom: 15px;
+}
+
+.mission h2,
+.vision h2 {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.mission p,
+.vision p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Image Container */
+.groupIMG {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Responsive Styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .groupIMG {
+        width: 100%; /* Ensure the image takes full width */
+        margin-top: 20px;
+    }
+
+    .img {
+        max-width: 200px; /* Adjust image size on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mission h2,
+    .vision h2 {
+        font-size: 1.4rem;
+    }
+
+    .mission p,
+    .vision p {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+
+
+/* Team Section (modified for small screens) */
+.team {
+    text-align: center;
+    padding: 40px 15px;
+    background-color: #2a87df;
+}
+
+.team h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default for small screens */
+    gap: 20px;
+    place-items: center;
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.team-member {
+    width: 95%; /* Take up more width on small screens */
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+}

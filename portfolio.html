@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <header>
+        <div class="hero">
+            <h1>Travel app</h1>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+     <!-- Portfolio Section -->
+     <section class="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="gallery">
+            <img src="images/SL.jpg" alt="Project 1" class="gallery-item" onclick="openLightbox('images/SL.jpg')">
+            <img src="images/Freetown-Sierra-Leone.jpg" alt="Project 2" class="gallery-item" onclick="openLightbox('images/Freetown-Sierra-Leone.jpg')">
+            <img src="images/SLLOGO.jpg" alt="Project 3" class="gallery-item" onclick="openLightbox('images/SLLOGO.jpg')">
+            <img src="images/sierra-leone-peace-and-cultural-monument.jpg" alt="Project 4" class="gallery-item" onclick="openLightbox('images/sierra-leone-peace-and-cultural-monument.jpg')">
+            <img src="images/c16f12e0-city-5571-169fd60e503.jpg" alt="Project 5" class="gallery-item" onclick="openLightbox('images/c16f12e0-city-5571-169fd60e503.jpg')">
+            <img src="images/img1.jpg" alt="Project 6" class="gallery-item" onclick="openLightbox('images/img1.jpg')">
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-img">
+    </div>
+ <!-- Footer -->
+ <footer>
+    <p>© 2025 Travel Agency. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+</body>
+<script>
+    // Open Lightbox
+  function openLightbox(imageSrc) {
+      document.getElementById("lightbox-img").src = imageSrc;
+      document.getElementById("lightbox").style.display = "flex";
+  }
+  
+  // Close Lightbox
+  function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+  }
+  </script>
+</html>

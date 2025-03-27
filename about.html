@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Travel app</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <header>
+        <div class="hero">
+            <h1>Travel app</h1>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+<section class="about fade-in">
+    <h1>About Us</h1>
+    <p>We are dedicated to providing you with the best travel experience...</p>
+</section>
+  
+      <!-- Mission and Vision Section -->
+      <section class="mission-vision">
+        <div class="container">
+          <div class="content">
+            <div class="miss_vision">
+              <div class="mission">
+                <h2>Our Mission</h2>
+                <p>Our mission is to make travel affordable and accessible for everyone while delivering exceptional customer service and unforgettable experiences.</p>
+              </div>
+              <div class="vision">
+                <h2>Our Vision</h2>
+                <p>Our vision is to be the leading travel agency that transforms how people experience the world, by making travel simpler, affordable, and more enjoyable for all.</p>
+              </div>
+            </div>
+            <div class="groupIMG">
+              <div class="img">
+                <img src="images/mary.jpeg" alt="Mary" class="fade-in" />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+  
+      <!-- Team Profile Section -->
+      <!-- <section class="team">
+        <div class="container">
+          <h2>Meet Our Team</h2>
+          <div class="team-members">
+            <div class="team-member">
+              <img src="images/n1.jpeg" alt="Team Member 1" class="team-photo"  />
+              <h3>Samba Edith watta</h3>
+              <p>CEO & Founder</p>
+              <p>Edith is passionate about creating memorable travel experiences and leading the company towards greater success.</p>
+            </div>
+            <div class="team-member">
+              <img src="images/n2.jpeg" alt="Team Member 2" class="team-photo" />
+              <h3>Alhaji Unisa Bah</h3>
+              <p>Marketing Manager</p>
+              <p>Alhaji handles our marketing strategies and ensures that our brand reaches travelers all over the world.</p>
+            </div>
+            <div class="team-member">
+              <img src="images/n3.jpeg" alt="Team Member 3" class="team-photo" />
+              <h3>Marion Koroma</h3>
+              <p>Tour Guide Specialist</p>
+              <p>Marion organizes and leads our tours, ensuring that each trip is packed with exciting adventures and rich experiences.</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Travel Agency. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  
+</body>
+
+<script>
+    // Function to handle the scroll event
+function handleScroll() {
+    const fadeElements = document.querySelectorAll('.fade-in'); // Get all elements with the "fade-in" class
+    fadeElements.forEach((el) => {
+        const rect = el.getBoundingClientRect(); // Get position of the element in viewport
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('visible'); // Add the "visible" class if element is in view
+        }
+    });
+}
+
+// Listen for the scroll event and run the handleScroll function
+window.addEventListener('scroll', handleScroll);
+
+// Call the function once on page load to check if any element is already in view
+handleScroll();
+
+</script>
+
+</html>

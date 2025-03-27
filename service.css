@@ -1,0 +1,305 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    box-sizing: border-box;
+    text-decoration: none;
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the screen */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+.scrollable-section {
+    max-height: 500px; /* Set a max height to make the content scrollable */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    padding: 20px;
+}
+
+
+/* Initial fade-out state */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px); /* Starts slightly lower */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+/* While in view, animate the element */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Bring the element back to the normal position */
+}
+
+/* Optional: Add more animations while scrolling (e.g., rotate, scale, etc.) */
+.fade-in.scrolled {
+    transform: translateY(0) scale(1.05); /* Scale up while visible */
+    opacity: 0.9; /* Slight opacity change while scrolling */
+}
+
+
+
+
+/* Header Styles */
+header {
+    background-color: rgb(82, 82, 218);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Title */
+.hero h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+/* Social Links */
+.social-links a {
+    margin: 0 8px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.8em;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        gap: 5px;
+    }
+    
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+
+
+    }
+}
+
+
+
+
+/* Responsive Styles for smaller screens */
+
+
+@media screen and (max-width: 480px) {
+   
+    .hero h1 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+
+
+
+/* Services Section Styles */
+.services {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Services Container */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Service Box Styles */
+.service-box {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-box i {
+    font-size: 3em;
+    color: #2196f3;
+    margin-bottom: 15px;
+}
+
+.service-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Hover effect for service boxes */
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    /* For tablet and smaller screens */
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services h2 {
+        font-size: 2.2em;
+    }
+
+    .service-box {
+        padding: 25px;
+    }
+
+    .service-box i {
+        font-size: 2.5em;
+    }
+
+    .service-box h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* For mobile landscape and smaller screens */
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services h2 {
+        font-size: 2em;
+    }
+
+    .service-box {
+        padding: 20px;
+    }
+
+    .service-box i {
+        font-size: 2em;
+    }
+
+    .service-box h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For mobile portrait screens */
+    .services h2 {
+        font-size: 1.8em;
+    }
+
+    .service-box {
+        padding: 15px;
+    }
+
+    .service-box i {
+        font-size: 1.8em;
+    }
+
+    .service-box h3 {
+        font-size: 1.1em;
+    }
+
+    .service-box p {
+        font-size: 0.9rem;
+    }
+}
+
+
